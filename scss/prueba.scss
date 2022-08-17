@@ -1,0 +1,134 @@
+@import "variables";
+@import "title";
+
+
+    .h2 {
+        background-color: rgba(116, 109, 6, 0.582) ;
+        text-align: center;
+        font-size: 40px;
+        font-weight: lighter;
+    }
+    
+    .h3 {
+        background-color: aquamarine;
+        text-align: center;
+        font-size: 40px;
+        font-style: italic;
+    }
+    
+    .ofertas {
+        background-color: rgba(110, 106, 49, 0.329) ;
+        padding: 5px;
+        
+    }
+    
+    .contacto {
+        background-color: rgba(77, 8, 8, 0.363);
+        padding: 5px;
+    }
+    
+    
+    
+    .pedidos {
+        background-color: rgba(18, 136, 91, 0.411);
+        padding: 5px;
+    }
+    td {
+        height: 25px;
+        width: 25px;
+    }
+    
+    .comment {
+        text-align: start;
+        font-weight: bold;
+        font-size: medium;
+    }
+    .comentario{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .img {
+        height: 200px;
+        width: 200px;
+        padding: 5px;
+    }
+    
+    .img:hover {
+        transform: rotateY(25deg);
+        transition: 2s ease;
+    }
+    
+    .h3 {
+        animation-name: fade-in;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+
+        p {
+            text-decoration: solid;
+            font-size: medium;
+        }
+    
+    }
+    
+    @keyframes fade-in {
+        0% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+    
+    .card {
+        padding: 5px !important;
+    }
+    
+    .container {
+        align-items: center !important;
+    }
+
+    .social {
+        font-size: larger;
+    }
+
+    $redes: (
+        twitter: #0ea3e9d0,
+        facebook: #1e1eec,
+        instagram: #e932dab0,
+    );
+    @each $red, $color in $redes {
+
+        .red-#{$red} {
+            color: $color;
+            @extend .social;
+        }
+    }
+
+    .social {
+        font-size: larger;
+    }
+
+    @mixin tamaño {
+        height: 32px;
+        width: 100%;
+        margin: 32px 8px;
+        text-align: center;
+        font-size: 24px;
+        
+    }
+    .productos {
+        background-color: rgba(50, 13, 85, 0.336);
+        padding: 10px;
+        
+        p {
+            font-weight: bold;
+            text-decoration: underline;
+            @include tamaño;
+
+        }
+    }
+
+    
